@@ -1,7 +1,7 @@
 function multiplyByTwo(number){
-    let multipliedN =0;
+    let multipliedN =2;
     function inner(){
-        multipliedN =number*2;
+        multipliedN =number*multipliedN;
         return multipliedN;
     }
     return inner;
