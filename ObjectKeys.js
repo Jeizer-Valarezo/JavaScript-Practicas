@@ -4,6 +4,13 @@ const person ={
     age: 25,
 };
 let keys = Object.keys(person);
-console.log(keys);
+
 let value = Object.values(person);
-console.log(value)
+
+let entries =Object.entries(person);
+
+
+for(let entry of entries){
+    let [key, val]= entry;
+    console.log(key,val);
+}
