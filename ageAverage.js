@@ -16,5 +16,5 @@ const persons = [
   ];
   
 const average = ageAverage(persons);
-console.log(average); // Output: 20.8
+console.log(average); 
   
