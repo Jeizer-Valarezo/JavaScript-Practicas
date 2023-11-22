@@ -53,3 +53,6 @@ function uncompletedNotes(notes) {
       ],
     },
   ];
+
+const uncompleted = uncompletedNotes(notes);
+console.log(uncompleted)
