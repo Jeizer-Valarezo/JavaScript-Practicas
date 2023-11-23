@@ -1,9 +1,10 @@
 function uncompletedNotes(notes) {
-    const uncompletedTodos = notes.flatMap((note) =>
-      note.todos.filter((todo) => !todo.done)
-    );
-    return uncompletedTodos;
-  }
+  notes.forEach((note) => {
+    note.todos = note.todos.filter((todo) => !todo.done);
+  });
+  return notes;
+}
+
   const notes = [
     {
       id: 1,
