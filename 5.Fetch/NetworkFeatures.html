@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="NetworkFeatures.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo">Enviar</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    let url ="https://jsonplaceholder.typicode.com/posts"
+    async function getResultado(event){
+      event.preventDefault();
+      let title=document.getElementById("todo-title").value;
+      let checkbox=document.getElementById("todo-completed").checked;
+      let content={
+        title,checkbox
+      }
+      let object={method:"POST", body:JSON.stringify(content), headers:{"Content-Type":"application/json"}};
+      let resultado = await fetch(url, object)
+      let vresul = await resultado.json()
+      console.log(vresul)
+    }
+    document.querySelector("form").addEventListener("submit", getResultado);
+    
+  </script>
+</html>
