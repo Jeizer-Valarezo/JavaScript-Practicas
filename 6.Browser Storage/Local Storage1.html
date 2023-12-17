@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <label>Local Storage</label>
+  </body>
+  <script>
+    function saveUserObject(user) {
+      const userJSON = JSON.stringify(user);
+      localStorage.setItem("user", userJSON);
+      console.log("El objeto de usuario se ha guardado en localStorage.");
+    }
+
+    const user = {
+      id: 1,
+      name: "John",
+      age: 25,
+    };
+
+    saveUserObject(user);
+  </script>
+</html>
